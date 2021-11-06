@@ -3,10 +3,10 @@
 
 
 
-
-void InsertionSort(int* arr, int size)
+template <typename T, typename F>
+void InsertionSort(T* arr, int size)
 {
-    int temp;
+    F temp;
     for (int i = 0; i < size-1 ; ++i) {
         if (arr[i] > arr[i+1])
         {
@@ -33,7 +33,7 @@ int main()
 {
     const int size = 10;
     int arr  [size] {5,6,4,1,2,9,3,8,7,0};
-    InsertionSort(arr,size);
+    InsertionSort<int,int>(arr,size);
     for (int i : arr) {
         std::cout << i << std::endl;
     }
